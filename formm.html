@@ -25,7 +25,9 @@
         h2 {
             text-align: center;
         }
-
+        h3 {
+            text-align: left;
+        }
         label {
             font-weight: bold;
         }
@@ -48,22 +50,27 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color:#0070C0;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h2>Hackathon Registration Form</h2>
+        <h2>
+            <b>Hackathon Registration Form</b>
+        </h2>
         <form action="#" method="post">
             <label for="fullname">Full Name:</label>
             <input type="text" id="fullname" name="fullname" required>
 
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch" name="branch" required>
+            
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="phone">Phone:</label>
+            <label for="phone">Contact Info:</label>
             <input type="text" id="phone" name="phone" required>
 
             <label for="team">Team Name (if applicable):</label>
@@ -76,11 +83,8 @@
             <input type="text" id="experience" name="experience" required>
 
             <input type="submit" value="Register">
-            
-            <input type="submit" value="Register">
         </form>
     </div>
-    <p>Project Completed</p>
 </body>
 
 </html>
