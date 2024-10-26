@@ -1,0 +1,71 @@
+'''
+CLI QUESTION:
+
+Welcome to your mission, Commander! 🛠️ You've been selected to take on a critical file and directory management challenge in the mysterious world of Linux. To succeed, you must prove your mastery of file manipulation using the powerful cp and mv commands.
+
+Your task? Execute a series of file operations across a range of directories, backing up files, organizing folders, and efficiently moving data. By the end of this challenge, you'll have crafted an impressive script that can manage any file system like a pro!
+
+Initial folder structure : 
+.
+├── source.txt                  # The source file for Task 1
+├── dest_folder/                # Empty folder for Task 3 (destination)
+├── src_folder/                 # Folder for Task 3, contains files to be copied
+│   ├── file1.txt
+│   └── file2.txt
+├── data_folder/                # Folder for Task 4, contains subfolders and files
+│   ├── file3.txt
+│   ├── subfolder1/
+│   │   └── subfile1.txt
+│   └── subfolder2/
+│       └── subfile2.txt
+├── backup_folder/              # Empty folder for Task 4 (backup destination)
+├── log.txt                     # Log file for Task 5 to be moved to the logs/ directory
+├── logs/                       # Folder for Task 5 (log.txt will be moved here)
+├── old_project/                # Folder for Task 6 (will be renamed to new_project/)
+├── temp_files/                 # Folder for Task 7, contains files to be moved to archive/
+│   ├── temp1.txt
+│   └── temp2.txt
+├── archive/                    # Folder for Task 7 (destination for files from temp_files/)
+├── docs/                       # Folder for Task 8 (to be moved to projects/)
+└── projects/                   # Folder for Task 8 (docs/ will be moved here)
+ 
+
+Your Mission:
+🚀 Task 1: Copy a File into Another File
+Deep in the bowels of your Linux machine, there's a file called source.txt. Your first task is simple: clone this file into a new one called destination.txt. Think of it as making sure a valuable artifact has a twin!
+
+🛡️ Task 2: Make a Backup of a File
+Before proceeding, it's always good practice to protect what you have. Create a backup of the newly created destination.txt—just in case something goes wrong. Name this backup destination.txt.bak. We don't want any precious data getting lost in this digital wilderness!
+
+📂 Task 3: Copy All Files from One Folder to Another
+You're given a folder, src_folder/, filled with valuable data. Your mission is to copy all the files from src_folder/ into an empty folder called dest_folder/. No file left behind!
+
+🏠 Task 4: Copy an Entire Folder into Another Folder (Recursively)
+It's time to perform a daring maneuver—copying an entire folder along with its hidden treasures! The folder is called data_folder/, and inside it lies a network of subfolders and files. Your task is to copy this entire structure into another folder called backup_folder/. Leave nothing behind; it's all precious!
+
+📦 Task 5: Move a File to Another Directory
+Next, you’ve uncovered a log file, log.txt, that needs to be safely stored in a more appropriate location. Move log.txt into the logs/ directory for safekeeping. A simple yet crucial task.
+
+🏗️ Task 6: Rename a Directory
+We’re renaming things for a fresh start! You have an old directory called old_project/. It needs a new identity. Your mission? Rename it to new_project/ and give it a new lease on life!
+
+📑 Task 7: Move All Files from One Folder to Another
+A folder called temp_files/ contains multiple loose files that need better organization. Move all the files from temp_files/ into the archive/ folder. It's time to tidy up and ensure everything is in the right place!
+
+🚚 Task 8: Move One Folder into Another Folder
+Finally, we have a directory called docs/ that must be moved into the projects/ folder, effectively turning docs/ into a subdirectory. It’s the last leg of your journey, and organization is key to your success!
+'''
+Sollution as Follows:
+
+cp source.txt destination.txt
+touch destination1.txt
+cp destination.txt destination1.txt
+mv destination1.txt destination.txt.bak
+cp src_folder/file1.txt dest_folder/
+cp src_folder/file2.txt dest_folder/
+cp -r data_folder/ ./backup_folder/
+mv log.txt logs/log.txt
+mv old_project/ new_project/
+mv temp_files/temp1.txt archive/
+mv temp_files/temp2.txt archive/
+mv docs/  projects/
